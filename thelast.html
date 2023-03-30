@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Tilt+Warp&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .conteudo {
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-evenly;
+        }
+
+        .informacoes {
+            background-color: #ffffff;
+        }
+
+        .informacoes .logo {
+            max-width: 300px;
+            filter: invert(1);
+            margin-bottom: 80px;
+            margin-left: 40px;
+            display: none;
+        }
+
+        .informacoes .logo.a {
+            max-width: 300px;
+            filter: invert(1);
+            margin-bottom: 80px;
+            margin-left: 40px;
+            display: block;
+        }
+
+        .informacoes .descricao {
+            width: 49%;
+            font-size: 24px;
+            color: #ffffff;
+            line-height: 29px;
+            text-shadow: black;
+            margin-left: 40px;
+            filter: drop-shadow(45);
+            filter: contrast(55);
+            display: none;
+        }
+
+        .informacoes .descricao.ok {
+            width: 49%;
+            font-size: 24px;
+            color: #ffffff;
+            line-height: 29px;
+            text-shadow: black;
+            margin-left: 40px;
+            filter: drop-shadow(45);
+            filter: contrast(55);
+            display: block;
+        }
+
+        .botoes-carrosel {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .botoes-carrosel .bt {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            border-color: #ffffff;
+            z-index: 1;
+        }
+
+        .botoes-carrosel .bt.ativado {
+            background-color: greenyellow;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: 1px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .menu .hbo {
+            height: 60px;
+            filter: drop-shadow(25);
+            transition: 0.3s ease-in-out;
+        }
+
+        .menu .hbo:hover {
+            transform: scale(1.2);
+        }
+
+        .carrossel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* z-index: 1; */
+        }
+
+        .carrossel .imgs {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            display: none;
+            animation: mudar 0.7s;
+        }
+
+        .carrossel .imgs.ativo {
+            display: block;
+        }
+
+        .menu #ps {
+            cursor: pointer;
+        }
+
+        .menu #ps {
+            margin-top: 20px;
+            filter: brightness(30);
+        }
+
+        .informacoes #tl {
+            filter: contrast(50);
+        }
+
+        @keyframes mudar {
+            from {
+                opacity: 0.85;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="carrossel">
+            <img class="imgs ativo" src="the-last-of-us-remastered-game-4k-53-1024x768.jpg" alt="Joel e Ellie">
+            <img class="imgs" src="the-last-of-us-part-ii-ellie-playstation-4-2020-games-3840x2160-1877.jpg"
+                alt="Ellie adulta">
+            <img class="imgs" src="wp11927323-the-last-of-us-hbo-wallpapers.jpg" alt="Joel e Ellie">
+        </div>
+        <div class="informacoes">
+            <div class="conteudo">
+                <img class="logo a" src="164-1645032_the-last-of-us-png2.png" alt="">
+                <img class="logo" src="the-last-of-us-part-2-logo.png" alt="">
+                <img id="tl" class="logo" src="TT.webp" alt="">
+                <p class="descricao ok">
+                    The Last of Us é uma franquia de jogos eletrônicos de ação-aventura e survival horror exclusiva da
+                    PlayStation, criada por Neil Druckmann. A franquia é situada em um mundo pós-apocalíptico, com seres
+                    humanos hostis e criaturas canibais infectadas por uma mutação do fungo cordyceps. Em uma
+                    civilização devastada, em que infectados e sobreviventes veteranos estão à solta, Joel, um
+                    protagonista abatido, é contratado para tirar uma garota de 14 anos, Ellie, de uma zona de
+                    quarentena militar. No entanto, o que começa como um pequeno serviço se transforma em uma jornada
+                    brutal através do país.
+                </p>
+                <p class="descricao">
+                    Ambientado cinco anos após os eventos de The Last of Us, o jogador assume o papel de duas
+                    protagonistas em um Estados Unidos pós-apocalíptico: Ellie, que busca por vingança após um evento
+                    traumático, e Abby, uma soldada que se envolve em um conflito entre uma milícia e um culto.
+                </p>
+                <p class="descricao">
+                    The Last of Us é uma série distópica da HBO baseada na franquia de jogos de videogame de mesmo nome
+                    criada por Neil Druckmann. O drama narra um futuro pandêmico que foi devastador para humanidade,
+                    deixando os seres humanos à beira da extinção.
+                </p>
+            </div>
+            <div class="botoes-carrosel">
+                <input class="bt ativado" type="button" id="bt1">
+                <input class="bt" type="button" id="bt2">
+                <input class="bt" type="button" id="bt3">
+            </div>
+        </div>
+        <aside class="menu">
+            <ul>
+                <li>
+                    <a href="https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series"
+                        target="_blank">
+                        <img class="hbo" src="hbo.png" alt="HBO">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://store.playstation.com/pt-br/product/UP9000-CUSA00552_00-THELASTOFUS00000"
+                        target="_blank">
+                        <img id="ps" class="hbo"
+                            src="kisspng-playstation-2-playstation-4-clip-art-playstation-3-blog-archives-polygonal-mind-5b7f832b303d69.5658535715350833071976.png"
+                            alt="Playstore">
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+</body>
+
+<script>
+    const bt_carrossel = document.querySelectorAll('.bt')
+    const imagens = document.querySelectorAll('.imgs')
+    const logos = document.querySelectorAll('.logo')
+    const paragrafos = document.querySelectorAll('.descricao')
+    bt_carrossel.forEach((bt, index) => {
+        bt.addEventListener('click', () => {
+            console.log(index)
+
+            var bt_selecionado = document.querySelector('.ativado')
+            bt_selecionado.classList.remove('ativado')
+
+            bt.classList.add('ativado')
+
+            var img_ativo = document.querySelector('.ativo')
+
+            img_ativo.classList.remove('ativo')
+
+            // console.log(imagens);
+
+            imagens[index].classList.add('ativo')
+
+            var logo_ativo = document.querySelector('.a')
+
+            logo_ativo.classList.remove('a')
+
+            logos[index].classList.add('a')
+
+            var para_ativo = document.querySelector('.ok')
+
+            para_ativo.classList.remove('ok')
+
+            paragrafos[index].classList.add('ok')
+
+        })
+    })
+</script>
+
+</html>
